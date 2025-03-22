@@ -1,0 +1,5 @@
+type = process
+command = /usr/bin/hexagonrpcd -f /dev/fastrpc-adsp -d adsp -s
+run-as = _fastrpc
+depends-on: local.target
+depends-on: device@/dev/fastrpc-adsp

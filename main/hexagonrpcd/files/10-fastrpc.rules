@@ -1,0 +1,1 @@
+SUBSYSTEM=="misc", KERNEL=="fastrpc-*", OWNER="_fastrpc", GROUP="_fastrpc", MODE="600", TAG+="dinit"
