@@ -1,3 +1,0 @@
-type = scripted
-command = /usr/bin/msm-firmware-loader
-depends-on: early-prepare.target

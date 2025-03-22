@@ -1,0 +1,3 @@
+type = scripted
+command = /usr/bin/hexagonfs-firmware-loader
+depends-on: msm-firmware-loader
