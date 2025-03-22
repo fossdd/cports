@@ -1,0 +1,40 @@
+Patch-Source: https://gitlab.gnome.org/World/Phosh/phosh/-/commit/9aa2729865103c49ae99c32c7b757eb594504ce2
+---
+From 9aa2729865103c49ae99c32c7b757eb594504ce2 Mon Sep 17 00:00:00 2001
+From: Sam Day <me@samcday.com>
+Date: Sat, 22 Mar 2025 16:33:49 +0100
+Subject: [PATCH] build: Remove nonexistent StatusPagePlaceholder symbol
+ exports
+
+These were introduces in a recent commit, but the actual symbols don't
+exist.
+
+This was identified by @fossdd when building 0.46~rc1 downstream in
+Alpine, where clang is being used. Seems that lld is more strict about
+this than gcc is.
+
+Closes: https://gitlab.gnome.org/World/Phosh/phosh/-/issues/1217
+Fixes: f5ca0cf4 ("status-page-placeholder: Propertify child")
+
+Signed-off-by: Sam Day <me@samcday.com>
+Part-of: <https://gitlab.gnome.org/World/Phosh/phosh/-/merge_requests/1686>
+---
+ src/phosh-exported-symbols.txt.in | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/src/phosh-exported-symbols.txt.in b/src/phosh-exported-symbols.txt.in
+index fb15380ba..4b6acf15f 100644
+--- a/src/phosh-exported-symbols.txt.in
++++ b/src/phosh-exported-symbols.txt.in
+@@ -64,8 +64,6 @@
+    phosh_status_page_placeholder_get_title;
+    phosh_status_page_placeholder_set_icon_name;
+    phosh_status_page_placeholder_get_icon_name;
+-   phosh_status_page_placeholder_set_child;
+-   phosh_status_page_placeholder_get_child;
+ 
+    # The plugins use our gtk-list-models:
+    gtk_filter_list_model_*;
+-- 
+GitLab
+
