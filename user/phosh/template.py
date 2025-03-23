@@ -38,7 +38,7 @@ depends = [
     "gnome-session",
     "gnome-settings-daemon",
     "phoc",
-    "phosh-osk-stub",  # TODO: use virtual provider
+    "virtual:phosh-keyboard!phosh-osk-stub",
     "xwayland",
 ]
 checkdepends = ["xwayland-run"]
