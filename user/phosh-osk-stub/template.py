@@ -10,15 +10,15 @@ hostmakedepends = [
     "pkgconf",
 ]
 makedepends = [
+    "elogind-devel",
+    "feedbackd-devel",
     "glib-devel",
+    "gmobile-devel",
     "gnome-desktop-devel",
+    "hunspell-devel",
+    "libhandy-devel",
     "wayland-devel",
     "wayland-protocols",
-    "gmobile-devel",
-    "feedbackd-devel",
-    "libhandy-devel",
-    "elogind-devel",
-    "hunspell-devel",
 ]
 checkdepends = ["xwayland-run"]
 pkgdesc = "Phosh OSK"
@@ -28,3 +28,7 @@ source = f"https://sources.phosh.mobi/releases/phosh-osk-stub/phosh-osk-stub-{pk
 sha256 = "5b68ad0bfbc6b62bf841d9279b9875bc047e4a1dcf69535b1fbba421953f59c3"
 # assertion 'GDK_IS_SEAT (seat)' failed (same as in main/libhandy)
 options = ["!check"]
+
+
+def _(self):
+    self.provides = ["phosh-keyboard=0"]
