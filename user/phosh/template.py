@@ -12,7 +12,11 @@ hostmakedepends = [
 ]
 makedepends = [
     "appstream-devel",
+    "callaudiod-devel",
+    "elogind-devel",
+    "evince-devel",
     "evolution-data-server-devel",
+    "feedbackd-devel",
     "gcr3-devel",
     "gmobile-devel",
     "gnome-bluetooth-devel",
@@ -20,25 +24,22 @@ makedepends = [
     "gobject-introspection-devel",
     "libgudev-devel",
     "libhandy-devel",
-    "callaudiod-devel",
-    "feedbackd-devel",
     "libpulse-devel",
+    "linux-pam-devel",
+    "modemmanager-devel",
     "networkmanager-devel",
     "polkit-devel",
-    "elogind-devel",
-    "modemmanager-devel",
     "upower-devel",
     "wayland-protocols",
-    "linux-pam-devel",
-    "evince-devel",
 ]
 depends = [
     "bash",  # FIXME
-    "gnome-session",
-    "xwayland",
     "dbus",
-    "phosh-osk-stub",  # TODO: use virtual provider
+    "gnome-session",
     "gnome-settings-daemon",
+    "phoc",
+    "phosh-osk-stub",  # TODO: use virtual provider
+    "xwayland",
 ]
 checkdepends = ["xwayland-run"]
 pkgdesc = "Wayland shell for GNOME on mobile devices"
