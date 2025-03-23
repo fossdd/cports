@@ -1,6 +1,6 @@
 pkgname = "feedbackd"
 pkgver = "0.8.0"
-pkgrel = 0
+pkgrel = 1
 build_style = "meson"
 hostmakedepends = [
     "glib-devel",
@@ -31,6 +31,8 @@ options = ["!check"]
 
 
 def post_install(self):
+    self.install_file(self.files_path / "90-feedbackd-aw8695.rules", "usr/lib/udev/rules.d")
+    self.install_file(self.files_path / "90-feedbackd-pm6150.rules", "usr/lib/udev/rules.d")
     self.uninstall("usr/lib/systemd/user")
 
 
