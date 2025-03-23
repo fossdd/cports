@@ -1,0 +1,17 @@
+terrible hack librs.a they're not in ./build/release but in
+./build/x86_64-chimera-linux-musl/release for *some* reason
+---
+diff --git a/cargo_build.py b/cargo_build.py
+index 0c7c5c6..7527cc8 100644
+--- a/cargo_build.py
++++ b/cargo_build.py
+@@ -43,7 +43,7 @@ if out_path:
+     out_basename = out_path.name
+     filename = filename or out_basename
+     subprocess.run(['cp', '-a',
+-        './{}/{}'.format(binary_dir, filename),
++        './*chimera*/{}/{}'.format(binary_dir, filename),
+         out_path],
+         check=True)
+ 
+
