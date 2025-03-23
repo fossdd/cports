@@ -8,7 +8,7 @@ configure_args = [
     "-Dgeoclue-user=_geoclue",
     "-Dssc-support=true",
 ]
-hostmakedepends = ["meson", "pkgconf"]
+hostmakedepends = ["glib-devel", "meson", "pkgconf"]
 makedepends = [
     "glib-devel",
     "libssc-devel",
