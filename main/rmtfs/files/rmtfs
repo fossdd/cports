@@ -1,0 +1,4 @@
+type = process
+command = /usr/bin/rmtfs -r -P -s
+run-as = _rmtfs
+depends-on: local.target
